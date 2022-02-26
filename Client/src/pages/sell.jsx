@@ -12,12 +12,14 @@ class Selling_form extends Component {
     super(props);
     this.state = {
       seller: sessionStorage.getItem("username"),
+      title: null, 
       description: null, 
       price: null,
       alert : false,
       alertMessage : null,
       alertType : null,
     };
+    this.handleTitleChange = this.handleTitleChange.bind(this); 
     this.handleDescriptionChange = this.handleDescriptionChange.bind(this); 
     this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,6 +37,10 @@ class Selling_form extends Component {
     window.location.href = "home"
   }
 
+  handleTitleChange(event) {
+    this.setState({ title: event.target.value })
+  }
+
   handleDescriptionChange(event) {
     this.setState({ description: event.target.value });
   }
@@ -44,7 +50,12 @@ class Selling_form extends Component {
   }
 
   handleSubmit(event) {
-    if (this.state.description === null) {
+    if (this.state.title === null) {
+      this.setState({ alert : true });
+      this.setState({ alertMessage : "Please enter a description." });
+      this.setState({ alertType : "error" });
+      event.preventDefault();
+    } else if (this.state.description === null) {
       this.setState({ alert : true });
       this.setState({ alertMessage : "Please enter a description." });
       this.setState({ alertType : "error" });
@@ -56,7 +67,7 @@ class Selling_form extends Component {
       event.preventDefault();
     } else {
       this.setState({ alert : true });
-      this.setState({ alertMessage : "You have successfully posted a request to sell the following product for " + this.state.price + " dollars: " + this.state.description});
+      this.setState({ alertMessage : "You have successfully posted a request to sell your" + this.state.title + " for " + this.state.price + " dollars."});
       this.setState({ alertType : "success" });
       const orderInfo = {
         seller: this.state.seller,
@@ -87,9 +98,15 @@ class Selling_form extends Component {
         <div className="container">
           <form>
           <p />
-            <label> Please describe what you're selling：</label>
             <p />
-            <TextField label="Enter a description" variant="outlined" value={this.state.description} onChange={this.handleDescriptionChange} />
+            <label> Please provide a title for your item: </label>
+            <p />
+            <TextField label="Enter a title" variant="outlined" value={this.state.title} onChange={this.handleTitleChange} />
+
+            <p />
+            <label> Please describe your item：</label>
+            <p />
+            <TextField label="Enter a description" multiline rows={4} value={this.state.description} onChange={this.handleDescriptionChange} />
 
             <p />
             <label> Please enter a price：</label>
