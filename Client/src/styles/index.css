@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background: rgb(247, 241, 229) !important;
+  display: flex;
+  justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
+  min-height: 100vh;
+  font-weight: 400;
+}
+
+.buyTimeRangeLabel {
+  margin-top: 17px;
+}
+
+.navbar {
+  background: rgb(247, 241, 229) !important;
+  font-size: 23px;
+  justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+.container {
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 361px;
+    margin-top: 30px;
+}
+
+.buyPageSearchContainer {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 300px;
+  margin-top: 30px;
+  margin-right: 50px;
+  float: left;
+}
+
+.orderPageComment {
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+
+.buyPageOrdersContainer {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 660px;
+  margin-top: 30px;
+  float: left;
+}
+
+.homePageOrdersContainer {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 400px;
+  max-width: 675px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+.homePageCommentsContainer {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 400px;
+  max-width: 675px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: 'Customized-Font';
+  src: URL('CustomizedFont.ttf') format('truetype')
+}
+
+.navHeading {
+    font-family: Customized-Font;
+    margin-top: 25px;
+    margin-right: 50px;
+    float: left;
+}
+
+.heading {
+  font-family: Customized-Font;
+  margin-top: 25px;
+}
+
+.homePageTitle {
+  font-family: Customized-Font;
+  margin-top: 15px;
+  margin-left: 73px;
+}
+
+.marginForm {
+  margin: 20px;
+}
+
+.normal_but {
+  border-color: rgb(117, 110, 95) !important;
+}
+
+.normal_but:hover {
+  border-color: rgb(117, 110, 95) !important;
+  background-color: #d4c8b0 !important;
+}
+
+.normal_but:focus {
+  border-color: rgb(117, 110, 95) !important;
+  background-color: #d4c8b0 !important;
+}
+
+.logout_but:hover {
+  background-color: #e9d8d4 !important;
+}
+
+.logout_but:focus {
+  background-color: #e9d8d4 !important;
+}
+
+input:focus {
+  box-shadow: none;
+  border-color: rgb(165, 155, 137) !important;
+}
+
+.signupInputText {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgb(192, 180, 157);
+  border: 1px solid rgb(192, 180, 157);
+}
+
+.btn-block {
+  width: 130px;
+  justify-self: stretch;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+
+.btn-block:hover {
+  justify-self: stretch;
+  color: white;
+  background-color: rgb(160, 151, 133);
+  border: 1px solid rgb(165, 155, 137);
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.btn-block:active {
+  justify-self: stretch;
+  color: white;
+  background-color: rgb(160, 151, 133);
+  border: 1px solid rgb(165, 155, 137);
+  padding: 12px 20px;
+  box-sizing: border-box;
+} 
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-block:focus {
+  box-shadow: none;
+}
+
+input[id=signup] {
+  margin-right: 10px;
+  border: 1px solid rgb(192, 180, 157);
+}
+
+input[id=signup]:hover {
+  background-color: rgb(233, 227, 216);
+  border: 1px solid rgb(192, 180, 157);
+  color: black;
+}
+
+input[id=signup]:active {
+  background-color: rgb(233, 227, 216);
+  border: 1px solid rgb(192, 180, 157);
+  color: black;
+}
+
+input[id=orderPageVerificationBox] {
+  margin-top: 10px;
+}
+
+input[id=login] {
+  margin-left: 10px;
+  border: 1px solid rgb(192, 180, 157);
+}
+
+input[id=login]:hover {
+  background-color: rgb(233, 227, 216);
+  border: 1px solid rgb(192, 180, 157);
+  color: black;
+}
+
+input[id=login]:active {
+  background-color: rgb(233, 227, 216);
+  border: 1px solid rgb(192, 180, 157);
+  color: black;
+}
+
+input[type=change_password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
