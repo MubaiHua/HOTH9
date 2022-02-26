@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import SignupPage from "./pages/signup";
 import ChangingPassword from "./pages/change-password";
+import SellPage from "./pages/sell"
 import "./styles/index.css";
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <Routes>
           <Route exact path="/" element={<SignupPage />} />
           <Route exact path="/change_password" element={<ChangingPassword/>} />
+          <Route exact path="/sell" element={<SellPage />} />
         </Routes>
       </Router>
     );
