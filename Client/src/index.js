@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import SignupPage from "./pages/signup";
 import ChangingPassword from "./pages/change-password";
-import SellPage from "./pages/sell"
+import SellPage from "./pages/sell"; 
+import BuyPage from "./pages/buy"; 
+
 import "./styles/index.css";
 
 class App extends Component {
@@ -15,6 +17,7 @@ class App extends Component {
           <Route exact path="/" element={<SignupPage />} />
           <Route exact path="/change_password" element={<ChangingPassword/>} />
           <Route exact path="/sell" element={<SellPage />} />
+          <Route exact path="/buy" element={<BuyPage />} />
         </Routes>
       </Router>
     );

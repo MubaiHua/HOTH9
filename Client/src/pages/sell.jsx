@@ -12,14 +12,14 @@ class Selling_form extends Component {
     super(props);
     this.state = {
       seller: sessionStorage.getItem("username"),
-      title: null, 
+      summary: null, 
       description: null, 
       price: null,
       alert : false,
       alertMessage : null,
       alertType : null,
     };
-    this.handleTitleChange = this.handleTitleChange.bind(this); 
+    this.handleSummaryChange = this.handleSummaryChange.bind(this); 
     this.handleDescriptionChange = this.handleDescriptionChange.bind(this); 
     this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,8 +37,8 @@ class Selling_form extends Component {
     window.location.href = "home"
   }
 
-  handleTitleChange(event) {
-    this.setState({ title: event.target.value })
+  handleSummaryChange(event) {
+    this.setState({ summary: event.target.value })
   }
 
   handleDescriptionChange(event) {
@@ -50,9 +50,9 @@ class Selling_form extends Component {
   }
 
   handleSubmit(event) {
-    if (this.state.title === null) {
+    if (this.state.summary === null) {
       this.setState({ alert : true });
-      this.setState({ alertMessage : "Please enter a description." });
+      this.setState({ alertMessage : "Please enter a summary." });
       this.setState({ alertType : "error" });
       event.preventDefault();
     } else if (this.state.description === null) {
@@ -67,7 +67,7 @@ class Selling_form extends Component {
       event.preventDefault();
     } else {
       this.setState({ alert : true });
-      this.setState({ alertMessage : "You have successfully posted a request to sell your" + this.state.title + " for " + this.state.price + " dollars."});
+      this.setState({ alertMessage : "You have successfully posted a request to sell your" + this.state.summary + " for " + this.state.price + " dollars."});
       this.setState({ alertType : "success" });
       const orderInfo = {
         seller: this.state.seller,
@@ -99,12 +99,12 @@ class Selling_form extends Component {
           <form>
           <p />
             <p />
-            <label> Please provide a title for your item: </label>
+            <label> Please provide a brief summary of the item: </label>
             <p />
-            <TextField label="Enter a title" variant="outlined" value={this.state.title} onChange={this.handleTitleChange} />
+            <TextField label="Enter a summary" variant="outlined" value={this.state.summary} onChange={this.handleSummaryChange} />
 
             <p />
-            <label> Please describe your item：</label>
+            <label> Please describe the item：</label>
             <p />
             <TextField label="Enter a description" multiline rows={4} value={this.state.description} onChange={this.handleDescriptionChange} />
 
