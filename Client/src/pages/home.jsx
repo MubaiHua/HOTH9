@@ -93,21 +93,6 @@ class HomePage extends Component {
     temp = [];
 
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i]);
-      let time_str = "";
-      if (data[i].time >= 1000) {
-        time_str =
-          String(data[i].time).slice(0, 2) +
-          ":" +
-          String(data[i].time).slice(2, 4);
-      } else {
-        time_str =
-          "0" +
-          String(data[i].time).slice(0, 1) +
-          ":" +
-          String(data[i].time).slice(1, 3);
-      }
-
       var status = "On Sale";
       if (data[i].inProgress) {
         status = "In Progress";
