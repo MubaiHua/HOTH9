@@ -25,17 +25,17 @@ export default class NavigationBar extends Component {
         const styles = 
         {
             "&.MuiButton-root": {
-                border: "2px #756e5f solid"
+                border: "2px #5f6f75 solid"
             },
             "&.MuiButton-text": {
-                color: "#756e5f",
+                color: "#5f6f75",
             },
             "&.MuiButton-contained": {
-                backgroundColor: "#d4c8b0",
-                color: "#756e5f"
+                backgroundColor: "#a0bbd9",
+                color: "#5f6f75"
             },
             "&.MuiButton-outlined": {
-                color: "#756e5f"
+                color: "#5f6f75"
             }
         }
 

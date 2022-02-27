@@ -9,7 +9,7 @@
 }
 
 body {
-  background: rgb(247, 241, 229) !important;
+  background: rgb(184, 215, 240) !important;
   display: flex;
   justify-content: center;
   font-family: 'Fira Sans', sans-serif;
@@ -22,7 +22,7 @@ body {
 }
 
 .navbar {
-  background: rgb(247, 241, 229) !important;
+  background: rgb(184, 215, 240) !important;
   font-size: 23px;
   justify-content: center;
 }
@@ -118,30 +118,30 @@ h1,h2,h3,h4,h5,h6,label,span {
 }
 
 .normal_but {
-  border-color: rgb(117, 110, 95) !important;
+  border-color: rgb(95, 111, 117) !important;
 }
 
 .normal_but:hover {
-  border-color: rgb(117, 110, 95) !important;
-  background-color: #d4c8b0 !important;
+  border-color: rgb(97, 95, 117) !important;
+  background-color: #b0c1d4 !important;
 }
 
 .normal_but:focus {
-  border-color: rgb(117, 110, 95) !important;
-  background-color: #d4c8b0 !important;
+  border-color: rgb(95, 111, 117) !important;
+  background-color: rgb(184, 215, 240) !important;
 }
 
 .logout_but:hover {
-  background-color: #e9d8d4 !important;
+  background-color: rgb(184, 215, 240) !important;
 }
 
 .logout_but:focus {
-  background-color: #e9d8d4 !important;
+  background-color: rgb(184, 215, 240) !important;
 }
 
 input:focus {
   box-shadow: none;
-  border-color: rgb(165, 155, 137) !important;
+  border-color: rgb(137, 146, 165) !important;
 }
 
 .signupInputText {
@@ -163,8 +163,9 @@ input[type=submit] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: rgb(192, 180, 157);
-  border: 1px solid rgb(192, 180, 157);
+  color: white;
+  background-color: rgb(118, 144, 185);
+  border: 1px solid rgb(118, 140, 182);
 }
 
 .btn-block {
@@ -180,8 +181,8 @@ input[type=submit] {
 .btn-block:hover {
   justify-self: stretch;
   color: white;
-  background-color: rgb(160, 151, 133);
-  border: 1px solid rgb(165, 155, 137);
+  background-color: rgb(100, 130, 172);
+  border: 1px solid rgb(100, 130, 172);
   padding: 12px 20px;
   box-sizing: border-box;
 }
@@ -189,8 +190,8 @@ input[type=submit] {
 .btn-block:active {
   justify-self: stretch;
   color: white;
-  background-color: rgb(160, 151, 133);
-  border: 1px solid rgb(165, 155, 137);
+  background-color: rgb(133, 144, 160);
+  border: 1px solid rgb(133, 144, 160);
   padding: 12px 20px;
   box-sizing: border-box;
 } 
@@ -205,18 +206,18 @@ input[type=submit] {
 
 input[id=signup] {
   margin-right: 10px;
-  border: 1px solid rgb(192, 180, 157);
+  border: 1px solid rgb(157, 168, 192);
 }
 
 input[id=signup]:hover {
-  background-color: rgb(233, 227, 216);
-  border: 1px solid rgb(192, 180, 157);
+  background-color: rgb(216, 225, 233);
+  border: 1px solid rgb(157, 168, 192);
   color: black;
 }
 
 input[id=signup]:active {
-  background-color: rgb(233, 227, 216);
-  border: 1px solid rgb(192, 180, 157);
+  background-color: rgb(216, 225, 233);
+  border: 1px solid rgb(157, 168, 192);
   color: black;
 }
 
@@ -226,18 +227,18 @@ input[id=orderPageVerificationBox] {
 
 input[id=login] {
   margin-left: 10px;
-  border: 1px solid rgb(192, 180, 157);
+  border: 1px solid rgb(157, 168, 192);
 }
 
 input[id=login]:hover {
-  background-color: rgb(233, 227, 216);
-  border: 1px solid rgb(192, 180, 157);
+  background-color: rgb(216, 225, 233);
+  border: 1px solid rgb(157, 168, 192);
   color: black;
 }
 
 input[id=login]:active {
-  background-color: rgb(233, 227, 216);
-  border: 1px solid rgb(192, 180, 157);
+  background-color: rgb(216, 225, 233);
+  border: 1px solid rgb(157, 168, 192);
   color: black;
 }
 
