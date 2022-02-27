@@ -71,7 +71,8 @@ class Selling_form extends Component {
       this.setState({ alertType : "success" });
       const orderInfo = {
         seller: this.state.seller,
-        description: this.description, 
+        summary: this.state.summary,
+        description: this.state.description, 
         price: this.state.price,
       }
       axios.post("http://localhost:4000/app/order", orderInfo)

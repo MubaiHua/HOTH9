@@ -44,7 +44,28 @@ const columns = [
   },
   { field: 'summary', headerName: 'Summary', width: 190, disableColumnMenu: true },
   { field: 'price', headerName: 'Price', width: 80, disableColumnMenu: true },
-  { field: 'details', headerName: 'Details', width: 80, disableColumnMenu: true },
+  { field: 'details', 
+    headerName: 'Details', 
+    width: 80, 
+    disableColumnMenu: true,
+    renderCell(params) {
+      const handleDetails = () => {
+        alert(params.getValue(params.id, "description"));
+      }
+
+      return (
+        <Button
+          variant="contained"
+          color="primary"
+          size="small"
+          style={{ marginRight: 32, width: 100, height: 40, borderRadius: 5 }}
+          onClick={handleDetails}
+        >
+          Details
+        </Button>
+      );
+    },
+  },
   {
     field: 'buy',
     headerName: 'Buy it!',
@@ -130,6 +151,8 @@ class BuyPage extends Component {
               seller: data[i].seller,
               rating: rating.toFixed(1),
               price: data[i].price,
+              summary: data[i].summary,
+              description: data[i].description,
               obj_id: data[i]._id,
             });
             this.setState({ rows: temp });
