@@ -1,0 +1,54 @@
+const mongoose = require("mongoose")
+const orderTemplate = new mongoose.Schema({
+    buyer:{
+        type: String,
+        required: false,
+    },
+
+    seller:{
+        type: String,
+        required: false,
+    },
+
+    summary:{
+        type: String,
+        required: true,
+    },
+
+    price:{
+        type: Number,
+        required: true
+    },
+
+    description:{
+        type: String,
+        required: true
+    },
+
+    inProgress:{
+        type: Boolean,
+        required: false
+    },
+
+    finished:{
+        type: Boolean,
+        required: false
+    },
+
+    code: {
+        type: Number,
+        required: false
+    },
+
+    sellerHasRated:{
+        type: Boolean,
+        required: false
+    },
+
+    buyerHasRated:{
+        type: Boolean,
+        required: false
+    }
+})
+
+module.exports = mongoose.model('myorders', orderTemplate)
