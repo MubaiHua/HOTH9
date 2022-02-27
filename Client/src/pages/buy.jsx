@@ -222,6 +222,7 @@ class BuyPage extends Component {
         seller: this.state.buyer,
         startPrice: search_start_price,
         endPrice: search_end_price,
+        keywords: this.state.keywords
       };
       axios
         .post("http://localhost:4000/app/searchOrder", interval)

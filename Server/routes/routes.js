@@ -66,10 +66,14 @@ router.post('/searchOrder', (request, response) => {
     const startPrice = request.body.startPrice;
     const endPrice = request.body.endPrice;
     const order_seller = request.body.seller;
+    var keywords = request.body.keywords;
+    if(keywords == null){
+        keywords = "."
+    }
 
     if (startPrice === -Infinity){
         if(endPrice === Infinity){
-            orderTemplateCopy.find({seller: {$ne: order_seller}, inProgress: {$ne: true}})
+            orderTemplateCopy.find({seller: {$ne: order_seller}, inProgress: {$ne: true}, description: {$regex : keywords, $options: 'is'}})
             .then(data => {
                 response.json(data)
             })
@@ -78,7 +82,7 @@ router.post('/searchOrder', (request, response) => {
             })            
         }
         else{
-            orderTemplateCopy.find({price: {$lte: endPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true}})
+            orderTemplateCopy.find({price: {$lte: endPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true}, description: {$regex : keywords, $options: 'is'}})
             .then(data => {
                 response.json(data)
             })
@@ -89,7 +93,7 @@ router.post('/searchOrder', (request, response) => {
     }
     else{
         if(endPrice === Infinity){
-            orderTemplateCopy.find({price: {$gte: startPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true}})
+            orderTemplateCopy.find({price: {$gte: startPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true},description: {$regex : keywords, $options: 'is'}})
             .then(data => {
                 response.json(data)
             })
@@ -98,7 +102,7 @@ router.post('/searchOrder', (request, response) => {
             })            
         }
         else{
-            orderTemplateCopy.find({price: {$gte: startPrice, $lte: endPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true}})
+            orderTemplateCopy.find({price: {$gte: startPrice, $lte: endPrice}, seller: {$ne: order_seller}, inProgress: {$ne: true},description: {$regex : keywords, $options: 'is'}})
             .then(data => {
                 response.json(data)
             })
