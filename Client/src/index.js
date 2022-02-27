@@ -8,6 +8,7 @@ import SellPage from "./pages/sell";
 import BuyPage from "./pages/buy"; 
 import HomePage from "./pages/home";
 import OrderPage from "./pages/order";
+import UserInfo from "./pages/user"
 
 import "./styles/index.css";
 
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact path="/buy" element={<BuyPage />} />
           <Route exact path="/home" element={<HomePage />} />
           <Route exact path="/order" element={<OrderPage />}/>
+          <Route exact path="/user_info" element={<UserInfo />} />
         </Routes>
       </Router>
     );
