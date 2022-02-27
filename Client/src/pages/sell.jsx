@@ -67,7 +67,7 @@ class Selling_form extends Component {
       event.preventDefault();
     } else {
       this.setState({ alert : true });
-      this.setState({ alertMessage : "You have successfully posted a request to sell your" + this.state.summary + " for " + this.state.price + " dollars."});
+      this.setState({ alertMessage : "You have successfully posted a request to sell your " + this.state.summary + " for " + this.state.price + " dollars."});
       this.setState({ alertType : "success" });
       const orderInfo = {
         seller: this.state.seller,

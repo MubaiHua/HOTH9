@@ -16,11 +16,11 @@ const columns = [
   },
   {
     field: "summary",
-    headerName: "Summary",
-    width: 140,
+    headerName: "Item Summary",
+    width: 210,
     disableColumnMenu: true,
   },
-  { field: "price", headerName: "Price", width: 80, disableColumnMenu: true },
+  { field: "price", headerName: "Price", width: 100, disableColumnMenu: true },
   {
     field: "status",
     headerName: "Status",

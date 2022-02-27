@@ -401,7 +401,7 @@ class OrderPage extends Component {
           <label>Buyer: {this.state.buyer}</label>
           <p />
           {contact_info}
-          <label>Item: {this.state.summary}</label>
+          <label>Item Summary: {this.state.summary}</label>
           <p />
           <label>Description: {this.state.description}</label>
           <p />

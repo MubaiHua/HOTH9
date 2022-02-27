@@ -42,7 +42,7 @@ const columns = [
         )
       }
   },
-  { field: 'summary', headerName: 'Summary', width: 190, disableColumnMenu: true },
+  { field: 'summary', headerName: 'Item Summary', width: 190, disableColumnMenu: true },
   { field: 'price', headerName: 'Price', width: 80, disableColumnMenu: true },
   { field: 'details', 
     headerName: 'Details', 
